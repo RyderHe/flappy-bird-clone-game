@@ -146,6 +146,11 @@ def main():
         # draw level
         level(curr_level)
         
+        if curr_level == 10:
+            font = pygame.font.Font("freesansbold.ttf", 30)
+            text = font.render("Good job! You are in the highest level!!!", True, white)
+            surface.blit(text, [1,50])
+        
         # update 
         y += y_move
         block_x -= block_move
